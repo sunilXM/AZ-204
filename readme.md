@@ -25,16 +25,18 @@ Companion Demo Material for Class Delivery by [Alexander Pajer](https://www.inte
 | Docker Desktop                                            | https://www.docker.com/products/docker-desktop                                          |
 | Node.js LTS                                               | https://nodejs.org/en/                                                                  |
 
-> Note: In order for Docker to work on a Windows 10 host you need to install [Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v) or use [Windows Subsystem for Linux 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install) (WSL2). WSL will be availabe with Windows 10 Version 2004 - Mai 2020 Update
+> Note: In order for Docker to work on a Windows 10 host you need to install Hyper-V or use Windows Subsystem for Linux 2 (WSL2). WSL will be availabe with Windows 10 Version 2004 - Mai 2020 Update. Please follow Setup Instructions for in the Root Installation Guide
 
-## Accounts Nedded
+> Note: A detailed Setup Guide can be found [here](https://github.com/ARambazamba/ClassSetup)
 
-[Github](https://github.com/)
+## Cloud Ressources Required
 
-Azure Account:
+[Github Account](https://github.com/)
+
+Azure Tenant:
 
 - Using [Azure Passes](https://www.microsoftazurepass.com/)
-- Azure MSDN Subscription
+- Azure Paid / Sponsored Subscription
 - [Azure Trial](https://azure.microsoft.com/en-us/free/)
 
 > Note: Azure Passes can only be used once per e-mail account (Live ID)
