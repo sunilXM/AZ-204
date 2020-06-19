@@ -26,3 +26,17 @@ Companion Demo Material for Class Delivery by [Alexander Pajer](https://www.inte
 | Node.js LTS                                               | https://nodejs.org/en/                                                                  |
 
 > Note: In order for Docker to work on a Windows 10 host you need to install [Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v) or use [Windows Subsystem for Linux 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install) (WSL2). WSL will be availabe with Windows 10 Version 2004 - Mai 2020 Update
+
+## Accounts Nedded
+
+[Github](https://github.com/)
+
+Azure Account:
+
+- Using [Azure Passes](https://www.microsoftazurepass.com/)
+- Azure MSDN Subscription
+- [Azure Trial](https://azure.microsoft.com/en-us/free/)
+
+> Note: Azure Passes can only be used once per e-mail account (Live ID)
+
+> Note: Please do not use a Production Account for Training
