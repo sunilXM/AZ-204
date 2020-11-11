@@ -3,7 +3,7 @@ grp=az204-aks-$rnd
 loc=westeurope
 aks=foodcluster-$rnd
 
-# Install kubectl command line client locally:
+# Install kubectl command line client locally + only required once otherwise err
 
 az aks install-cli
 
