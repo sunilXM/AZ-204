@@ -8,7 +8,7 @@ loc=westeurope
 az group create -n $grp -l $loc
 
 # create an App Service plan
-az appservice plan create -n $appPlan -g $grp --sku B2
+az appservice plan create -n $appPlan -g $grp --sku FREE
 
 # create a Web App
 az webapp create -n $web -g $grp --plan $appPlan
@@ -26,7 +26,7 @@ dotnet run,
 
 # Check https://localhost:5001, press ctrl+c,
 
-dotnet publish /p:PublishProfile=Properties\PublishProfiles\azure.pubxml /p:Password=<password>
+dotnet publish /p:Configuration=Release /p:PublishProfile=Properties\PublishProfiles\azure.pubxml /p:Password=<password>
 
 # Use App Service Extension to deploy to website
 

@@ -52,3 +52,19 @@ az appservice plan create -n $appPlan -g $grp --sku B2
 [Azure Account](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account)
 
 [Azure CLI Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azurecli)
+
+## Install Azure CLI
+
+Install Chocoolatey in an elevated Prompt:
+
+```
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+```
+
+Install Azure CLI in an elevated Prompt:
+
+```
+choco install azure-cli
+```
+
+> Note: To install Azure CLI in Linux (ie. WSL) execute `install-az-cli-linux.sh`
