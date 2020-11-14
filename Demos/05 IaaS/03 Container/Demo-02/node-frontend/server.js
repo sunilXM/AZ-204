@@ -13,7 +13,7 @@ app.get("/api", function (req, res) {
   res.send("Hello from webfrontend");
 });
 
-var port = process.env.PORT || 8088;
+var port = process.env.PORT || 80;
 var server = app.listen(port, function () {
   console.log("Listening on port " + port);
 });
