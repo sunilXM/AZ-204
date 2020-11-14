@@ -26,3 +26,7 @@ az storage blob upload --container-name $container --file $file_to_upload --name
 az storage blob list --container-name $container --output table
 
 az storage blob download --container-name $container --name $blob_name --file $destination_file --output table
+
+conStr=$(az storage account show-connection-string -n $acct -g $grp --query connectionString)
+
+echo "connectionString to use in .NET Demo: $conStr"
