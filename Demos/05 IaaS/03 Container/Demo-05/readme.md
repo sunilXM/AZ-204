@@ -51,3 +51,9 @@ Install Helm Chart:
 ```
 helm install node-frontend node-frontend/
 ```
+
+List the pods:
+
+```
+kubectl get pods
+```
