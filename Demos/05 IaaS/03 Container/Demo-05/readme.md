@@ -2,13 +2,13 @@
 
 [Helm Documentation](https://helm.sh/)
 
-#### Installation on Windows
+## Installation on Windows
 
 [Get Chocolatey](https://chocolatey.org/install)
 
 `choco install kubernetes-helm`
 
-#### Installation on Linux or WSL
+## Installation on Linux or WSL
 
 ```
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
@@ -16,7 +16,7 @@ chmod 700 get_helm.sh
 ./get_helm.sh
 ```
 
-#### Using Helm
+## Using Helm
 
 [Using Helm](https://helm.sh/docs/intro/using_helm/)
 
@@ -24,12 +24,30 @@ chmod 700 get_helm.sh
 
 Sample: https://github.com/Azure-Samples/helm-charts/tree/master/chart-source/azure-vote
 
-List Repos
+List Repos:
 
 ```
 helm repo list
 ```
 
-Install a Repo
+Install a Repo:
 
 helm install voting azure-samples/azure-vote
+
+Creating a Helm Chart:
+
+```
+helm create node-frontend
+```
+
+List Cluster:
+
+```
+kubectl get service --watch
+```
+
+Install Helm Chart:
+
+```
+helm install node-frontend node-frontend/
+```
