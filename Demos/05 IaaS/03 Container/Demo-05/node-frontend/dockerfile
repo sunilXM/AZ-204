@@ -10,6 +10,6 @@ CMD [ "node", "server.js" ]
 
 # Build
 
-# docker build -t arambazamba/node-app .
-# docker run -p 8090:80 -d arambazamba/node-app
-# docker push arambazamba/node-app
+# docker build -t arambazamba/node-app:1.19.0 .
+# docker run -p 8090:80 -d arambazamba/node-app:1.19.0
+# docker push arambazamba/node-app:1.19.0

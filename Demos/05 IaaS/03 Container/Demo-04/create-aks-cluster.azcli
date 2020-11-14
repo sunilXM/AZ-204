@@ -1,7 +1,7 @@
 rnd=$RANDOM
 grp=az204-aks-$rnd
 loc=westeurope
-aks=foodcluster-$rnd
+aks=testcluster-$rnd
 
 # Install kubectl command line client locally + only required once otherwise err
 
@@ -20,6 +20,10 @@ az aks create -g $grp -n $aks --node-count 1 --enable-addons monitoring --genera
 # Get credentials for the Kubernets cluster:
 
 az aks get-credentials -g $grp -n $aks
+
+# Show the credentials:
+
+cat /home/alexander/.kube/config
 
 # Get a list of cluster nodes:
 
