@@ -1,3 +1,6 @@
 [submodule "Demos/01 AppServices/Demo-02/FoodApp"]
 	path = Demos/01 AppServices/Demo-02/FoodApp
 	url = https://github.com/ARambazamba/FoodApp
+[submodule "Demos/01 AppServices/Demo-03/GitDeployApp"]
+	path = Demos/01 AppServices/Demo-03/GitDeployApp
+	url = https://github.com/ARambazamba/GitDeployApp
