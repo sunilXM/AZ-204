@@ -15,7 +15,7 @@ namespace key_vault_console
             
             var client = new SecretClient(new Uri(keyVaultUri), new DefaultAzureCredential());
             KeyVaultSecret key = await client.GetSecretAsync(secretName);
-            Console.WriteLine(key.Value)
+            Console.WriteLine(key.Value);
         }
     }
 }
