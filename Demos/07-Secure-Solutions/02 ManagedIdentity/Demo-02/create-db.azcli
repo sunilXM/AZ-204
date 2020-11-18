@@ -1,4 +1,5 @@
-rnd=$RANDOM
+# rnd=$RANDOM
+rnd=8811
 loc='WestEurope'
 grp=az-204-managed-identity-$rnd
 sqlserver=az-204-managed-identity-$rnd

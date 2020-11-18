@@ -1,0 +1,14 @@
+# rnd=$RANDOM
+rnd=8811
+loc='WestEurope'
+grp=az-204-managed-identity-$rnd
+plan=mi-plan-$rnd
+app=mi-app-$rnd
+adminUser=sqladmin
+adminPwd=TiTp4lab1234@
+conStr='Server=tcp:az-204-managed-identity-8811.database.windows.net,1433;Database=coreDB;User ID=sqladmin;Password=TiTp4lab1234@;Encrypt=true;Connection Timeout=30;'
+
+# az webapp deployment user set --user-name $adminUser --password $adminPwd
+az appservice plan create -n $plan  -g $grp --sku FREE
+az webapp create -g $grp --plan $plan --name $app --deployment-local-git
+az webapp config connection-string set -g $grp -n $app --settings MyDbConnection=$conStr --connection-string-type SQLAzure

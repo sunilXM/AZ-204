@@ -1,5 +1,7 @@
 # Deploy .NET Core Api
 
+> Note: FoodApp is a Git Submodule taken from [https://github.com/ARambazamba/FoodApp](https://github.com/ARambazamba/FoodApp)
+
 Deploy Api using [GitHub Actions](https://github.com/Azure/actions)
 
 ```yaml
