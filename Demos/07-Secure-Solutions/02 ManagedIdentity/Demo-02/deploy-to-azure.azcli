@@ -12,3 +12,8 @@ conStr='Server=tcp:az-204-managed-identity-8811.database.windows.net,1433;Databa
 az appservice plan create -n $plan  -g $grp --sku FREE
 az webapp create -g $grp --plan $plan --name $app --deployment-local-git
 az webapp config connection-string set -g $grp -n $app --settings MyDbConnection=$conStr --connection-string-type SQLAzure
+
+# Additional Steps
+
+git remote add azure <deploymentLocalGitUrl-from-create-step>
+git push azure master
