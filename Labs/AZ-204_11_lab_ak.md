@@ -1,12 +1,12 @@
 ---
 lab:
-    title: 'Lab: Asynchronously processing messages by using Azure Queue storage'
+    title: 'Lab: Asynchronously processing messages by using Azure Queue Storage'
     az204Module: 'Module 11: Develop message-based solutions'
     az020Module: 'Module 10: Develop message-based solutions'
     type: 'Answer Key'
 ---
 
-# Lab: Asynchronously processing messages by using Azure Storage Queues
+# Lab: Asynchronously processing messages by using Azure Queue Storage
 # Student lab answer key
 
 ## Microsoft Azure user interface
@@ -601,18 +601,6 @@ In this exercise, you created new messages in the queue by using the .NET librar
     -   A dialog box prompts you to create a new storage account to begin using the shell. Accept the default settings, and then select **Create storage**. 
 
     > **Note**: Wait for Cloud Shell to finish its initial setup procedures before moving forward with the lab. If you don't notice Cloud Shell configuration options, this is most likely because you're using an existing subscription with this course's labs. The labs are written with the presumption that you're using a new subscription.
-
-1.  At the **Cloud Shell** command prompt in the portal, enter the following command, and then select Enter to list all resource groups in the subscription:
-
-    ```
-    az group list
-    ```
-
-1.  At the command prompt, enter the following command, and then select Enter to get a list of possible commands to delete a resource group:
-
-    ```
-    az group delete --help
-    ```
 
 #### Task 2: Delete a resource group
 

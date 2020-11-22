@@ -4,10 +4,8 @@ Install azure-function-tools
 
 ```
 npm i -g azure-functions-core-tools
-npm install -g azure-functions-core-tools@3
+npm i -g azure-functions-core-tools@3
 ```
-
-> Note: Requires [Node.js](https://nodejs.org/en/)
 
 > Note: Documentaion can be found on [Github](https://github.com/Azure/azure-functions-core-tools) or on [docs.microsoft.com](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=windows%2Ccsharp%2Cbash)
 

@@ -1,6 +1,6 @@
 ---
 lab:
-    title: 'Lab: Building a web application on Azure App Service'
+    title: 'Lab: Building a web application on Azure platform as a service offerings'
     az204Module: 'Module 01: Creating Azure App Service Web Apps'
     az020Module: 'Module 01: Creating Azure App Service Web Apps'
     type: 'Answer Key'
@@ -159,7 +159,7 @@ Find the taskbar on your Windows 10 desktop. The taskbar contains the icons for 
 
     1.  In the **Publish** section, select **Code**.
 
-    1.  In the **Runtime stack** drop-down list, select **.NET Core 3.0 (current)**.
+    1.  In the **Runtime stack** drop-down list, select **.NET Core 3.1 (LTS)**.
 
     1.  In the **Operating System** section, select **Windows**.
 
@@ -208,6 +208,8 @@ Find the taskbar on your Windows 10 desktop. The taskbar contains the icons for 
 1.  From the **Web App** blade in the **Settings** section, select the **Properties** link.
 
 1.  In the **Properties** section, copy the value of the **URL** text box. You'll use this value later in the lab.
+
+    > **Note**: At this point, the web server at this URL will return a 404 error. You have not deployed any code to the Web App yet. You will deploy code to the Web App later in this lab.
 
 #### Task 6: Deploy an ASP.NET web application to Web Apps
 
@@ -321,7 +323,7 @@ In this exercise, you created a web app in Azure and then deployed your ASP.NET 
 
     1.  In the **Publish** section, select **Code**.
 
-    1.  In the **Runtime stack** drop-down list, select **.NET Core 3.0 (current)**.
+    1.  In the **Runtime stack** drop-down list, select **.NET Core 3.1 (LTS)**.
 
     1.  In the **Operating System** section, select **Windows**.
 
@@ -478,18 +480,6 @@ In this exercise, you created an Azure web app and deployed an existing web appl
     1.  Wait for Cloud Shell to finish its initial setup procedures before moving forward with the lab.
 
     > **Note**: If you don't notice the Cloud Shell configuration options, this is most likely because you're using an existing subscription with this course's labs. The labs are written with the presumption that you're using a new subscription.
-
-1.  At the **Cloud Shell** command prompt in the portal, enter the following command, and then select Enter to list all resource groups in the subscription:
-
-    ```
-    az group list
-    ```
-
-1.  Enter the following command, and then select Enter to get a list of possible commands to delete a resource group:
-
-    ```
-    az group delete --help
-    ```
 
 #### Task 2: Delete resource groups
 

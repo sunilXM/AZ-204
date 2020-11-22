@@ -69,7 +69,7 @@ Find the taskbar on your Windows 10 desktop. The taskbar contains the icons for 
     az --version
     ```
 
-#### Task 3: Register the Microsoft.EventGrid provider
+#### Task 3: View the Microsoft.EventGrid provider registration
 
 1.  At the **Cloud Shell** command prompt in the portal, perform the following actions:
 
@@ -107,7 +107,7 @@ Find the taskbar on your Windows 10 desktop. The taskbar contains the icons for 
 
 1.  On the **New** blade, find the **Search the Marketplace** text box.
 
-1.  In the search box, enter **Event Grid**, and then select Enter.
+1.  In the search box, enter **Event Grid Topic**, and then select Enter.
 
 1.  On the **Everything** search results blade, select the **Event Grid Topic** result.
 
@@ -365,7 +365,7 @@ In this exercise, you created a new subscription, validated its registration, an
 
     public class Program
     {
-        private const string topicEndpoint = <topic-endpoint>";
+        private const string topicEndpoint = "<topic-endpoint>";
         private const string topicKey = "<topic-key>";
         
         public static async Task Main(string[] args)
@@ -568,18 +568,6 @@ In this exercise, you published new events to your Event Grid topic using a .NET
     1.  A dialog box prompts you to create a new storage account to begin using the shell. Accept the default settings, and then select **Create storage**. 
 
     > **Note**: Wait for Cloud Shell to finish its initial setup procedures before moving forward with the lab. If you don't notice the Cloud Shell configuration options, this is most likely because you're using an existing subscription with this course's labs. The labs are written with the presumption that you're using a new subscription.
-
-1.  At the **Cloud Shell** command prompt, enter the following command, and then select Enter to list all resource groups in the subscription:
-
-    ```
-    az group list
-    ```
-
-1.  Enter the following command, and then select Enter to get a list of possible commands to delete a resource group:
-
-    ```
-    az group delete --help
-    ```
 
 #### Task 2: Delete resource groups
 

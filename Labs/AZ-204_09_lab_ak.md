@@ -294,7 +294,7 @@ In this exercise, you built a basic workflow that starts when it's triggered by 
 
 ### Exercise 3: Use Azure API Management as a proxy for Logic Apps
 
-#### Task 1: Create a new product
+#### Task 1: Create an API integrated with Logic Apps
 
 1.  In the Azure portal navigation pane, select **Resource groups**.
 
@@ -302,27 +302,7 @@ In this exercise, you built a basic workflow that starts when it's triggered by 
 
 1.  On the **AutomatedWorkflow** blade, select the **prodapim*[yourname]*** API Management resource that you created earlier in this lab.
 
-1.  From the **API Management Service** blade, in the **API Management** section, select **Products**.
-
-1.  In the **Products** section, select **+ Add**.
-
-1.  In the **Add product** dialog box, perform the following actions:
-
-    1.  In the **Display name** text box, enter **Free**.
-
-    1.  In the **Id** text box, enter **free**.
-
-    1.  In the **Description** text box, enter **Free tier for anonymous use**.
-
-    1.  In the **State** section, select **Published**.
-
-    1.  Ensure that the **Requires subscription** check box is cleared.
-
-    1.  Select **Create**.
-
-#### Task 2: Create an API integrated with Logic Apps
-
-1.  On the **API Management Service** blade, in the **API Management** section, select **APIs**.
+1.  From the **API Management Service** blade, in the **API Management** section, select **APIs**.
 
 1.  In the **Add a new API** section, select **Logic App**.
 
@@ -338,17 +318,13 @@ In this exercise, you built a basic workflow that starts when it's triggered by 
     
     1.  In the **Name** text box, enter **metadata-lookup**.
 
-    1.  In the **Description** text box, enter **Lookup metadata JSON files**.
-
     1.  Leave the **API URL suffix** text box empty.
-
-    1.  In the **Products** list, select **Free**.
 
     1.  Select **Create**. 
 
     > **Note**: Wait for the new API to finish being created.
 
-#### Task 3: Test the API operation
+#### Task 2: Test the API operation
 
 1.  From the **Design** tab, select **Test**.
 
@@ -362,45 +338,7 @@ In this exercise, you built a basic workflow that starts when it's triggered by 
 
     1.  In the **HTTP response** section, observe the JSON results of the test request.
 
-#### Task 4: Validate the end-to-end solution using httprepl
-
-1.  On the taskbar, select the **Windows Terminal** icon.
-
-1.  At the open command prompt, enter the following command, and then select Enter to start the **httprepl** tool setting the base URI to the value of the **Request URL** for the API operation that you copied earlier in this lab.
-
-    ```
-    httprepl <api-operation-request-url>
-    ```
-
-    > **Note**: For example, if your **URL** is **https://prodapimstudent.azure-api.net/manual/paths/invoke**, your command would be **httprepl https://prodapimstudent.azure-api.net/manual/paths/invoke**.
-
-1.  Within the tool prompt, enter the following command, and then select Enter to run the **get** command against the API endpoint:
-
-    ```
-    get
-    ```
-
-1.  Observe the JSON response content from the function app, which should now include:
-
-    ```
-    [ 
-        "item_00.json",
-        "item_01.json",
-        "item_02.json",
-        "item_03.json",
-        "item_04.json"
-    ]
-    ```
-
-1.  Enter the following command, and then select Enter to exit the **httprepl** application:
-
-    ```
-    exit
-    ```
-
-1.  Close the currently running Windows Terminal application.
-
-1.	Return to your browser window with  Azure portal.
+1.	Return to your browser window with the Azure portal.
 
 #### Review
 
@@ -412,17 +350,13 @@ In this exercise, you used Azure API Management as a proxy to trigger your Logic
 
 1.  In Azure portal, select the **Cloud Shell** icon to open a new shell instance.
 
-1.  In the Azure portal, at the **Cloud Shell** command prompt, enter the following command, and then select Enter to list all resource groups in the subscription:
+    > **Note**: The **Cloud Shell** icon is represented by a greater than sign (\>) and underscore character (\_).
 
-    ```
-    az group list
-    ```
+1.  If this is your first time opening Cloud Shell using your subscription, you can use the **Welcome to Azure Cloud Shell Wizard** to configure Cloud Shell for first-time usage. Perform the following actions in the wizard:
+    
+    1.  A dialog box prompts you to create a new storage account to begin using the shell. Accept the default settings, and then select **Create storage**. 
 
-1.  Enter the following command, and then select Enter to find a list of possible commands to delete a resource group:
-
-    ```
-    az group delete --help
-    ```
+    > **Note**: Wait for Cloud Shell to finish its initial setup procedures before moving forward with the lab. If you don't notice the Cloud Shell configuration options, this is most likely because you're using an existing subscription with this course's labs. The labs are written with the presumption that you're using a new subscription.
 
 #### Task 2: Delete resource groups
 
