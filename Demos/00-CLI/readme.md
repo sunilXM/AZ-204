@@ -68,3 +68,7 @@ choco install azure-cli
 ```
 
 > Note: To install Azure CLI in Linux (ie. WSL) execute `install-az-cli-linux.sh`
+
+## Additional Labs & Walkthroughs
+
+[Control Azure services with the CLI](https://docs.microsoft.com/en-us/learn/modules/control-azure-services-with-cli/)

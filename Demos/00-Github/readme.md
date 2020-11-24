@@ -255,6 +255,23 @@ Fetch from Upstream:
  git push origin master
 ```
 
+## Working with Submodules
+
+Add a Submodule:
+
+```
+git submodule add https://github.com/ARambazamba/FoodApp FoodApp
+git commit -m foodapp-submodule
+```
+
+Updating a Submodule to it's latest commit:
+
+```
+git submodule update --remote --merge
+```
+
+> Note: I use submodules to include samples in classes that are used in different classes or to shorten / avoid path problems in devops
+
 ## Git-flow
 
 [Gitflow Cheatsheet](https://danielkummer.github.io/git-flow-cheatsheet/)
@@ -297,19 +314,6 @@ Finish a release:
 git flow release finish  RELEASE
 ```
 
-## Working with Submodules
+## Additional Labs & Walkthroughs
 
-Add a Submodule:
-
-```
-git submodule add https://github.com/ARambazamba/FoodApp FoodApp
-git commit -m foodapp-submodule
-```
-
-Updating a Submodule to it's latest commit:
-
-```
-git submodule update --remote --merge
-```
-
-> Note: I use submodules to include samples in classes that are used in different classes or to shorten / avoid path problems in devops
+[Introduction to version control with Git](https://docs.microsoft.com/en-us/learn/paths/intro-to-vc-git/)

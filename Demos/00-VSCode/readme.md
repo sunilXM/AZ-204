@@ -106,3 +106,7 @@ Copy settings.json & keybindings.json to `%APPDATA%\Code\User\settings.json`
     }
   ]
 ```
+
+## Additional Labs & Walkthroughs
+
+[Develop web applications with Visual Studio Code](https://docs.microsoft.com/en-us/learn/modules/develop-web-apps-with-vs-code/)
