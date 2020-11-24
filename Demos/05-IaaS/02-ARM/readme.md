@@ -17,3 +17,7 @@
 [Azure Resource Manager (ARM) Tools](https://marketplace.visualstudio.com/items?itemName=msazurermtools.azurerm-vscode-tools)
 
 [ARM Template Viewer](https://marketplace.visualstudio.com/items?itemName=bencoleman.armview)
+
+## Additional Labs & Walkthroughs
+
+[Deploy and manage resources in Azure by using ARM templates](https://docs.microsoft.com/en-us/learn/paths/deploy-manage-resource-manager-templates/)

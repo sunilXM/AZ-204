@@ -11,3 +11,7 @@ setx AppConfigCS "Endpoint=https://foodconfig-20433.azconfig.io;Id=YhpI-l9-s0:bX
 ![secret](_images/app-config-con-string.png)
 
 Examine Demo-01 and execute it using `dotnet run`
+
+## Additional Labs & Walkthroughs
+
+[Tutorial: Use dynamic configuration in an ASP.NET Core app](https://docs.microsoft.com/en-us/azure/azure-app-configuration/enable-dynamic-configuration-aspnet-core?tabs=core2x)

@@ -1,6 +1,4 @@
-# Markdown
-
-Add your own Comments using Markdown
+# Repo Documentation & Colloboration using Markdown
 
 [Intro to Markdown - Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 

@@ -17,3 +17,7 @@ az vm encryption show -g az-203 -n winVM
 
 az vm encryption enable -g az-203 -n winVM --disk-encryption-keyvault az203vaultap --volume-type all
 ```
+
+## Additional Labs & Walkthroughs
+
+[Deploy a website with Azure virtual machines](https://docs.microsoft.com/en-us/learn/paths/deploy-a-website-with-azure-virtual-machines/)
