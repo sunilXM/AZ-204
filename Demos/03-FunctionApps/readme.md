@@ -14,6 +14,8 @@
 
 [Azure Functions Durable Extensions](https://github.com/Azure/azure-functions-durable-extension)
 
+[Work with Azure Functions Core Tools](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=windows%2Ccsharp%2Cbash#v2)
+
 ## CLI Reference
 
 [az functionapp](https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest)
