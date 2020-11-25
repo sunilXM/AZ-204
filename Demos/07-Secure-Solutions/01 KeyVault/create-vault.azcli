@@ -5,7 +5,7 @@ vault=labvault-$rnd
 
 az group create -n $grp -l $loc
 
-az keyvault create -l $loc -n $vault -g $grp --enabled-for-disk-encryption true --sku standard
+az keyvault create -l $loc -n $vault -g $grp --sku standard --enabled-for-disk-encryption true 
 
 az keyvault key list --vault-name $vault
 

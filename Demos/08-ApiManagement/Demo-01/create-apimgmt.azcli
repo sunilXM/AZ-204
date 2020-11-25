@@ -9,4 +9,4 @@ url=foodapi-20887
 # Use url of service you published
 swagger="https://$url.azurewebsites.net/swagger/v1/swagger.json"
 
-az apim create -n $apimgmt -g $grp -l $loc --publisher-email $mail --publisher-name $publisher -sku-name Developer
+az apim create -n $apimgmt -g $grp -l $loc --publisher-email $mail --publisher-name $publisher --sku-name Developer
