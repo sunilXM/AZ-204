@@ -1,5 +1,7 @@
 # App Configuration
 
+[App Configurations Docs](https://docs.microsoft.com/en-us/azure/azure-app-configuration/)
+
 Execute `create-app-conf.azcli` to create required base services.
 
 Get the Connection String of the AppConfig Service and add it as env var:
