@@ -5,6 +5,9 @@ using StackExchange.Redis;
 namespace RedisSample {
     class Program {
         static void Main (string[] args) {
+            
+            //dotnet user-secrets set CacheConnection az204-redis-demo-1618.redis.cache.windows.net,abortConnect=false,ssl=true,password="wr988naeX5gM+gPSwJBQGKlQn0idwZJ3LQo++5dfnjE="
+
             InitializeConfiguration ();
 
             // Connection refers to a property that returns a ConnectionMultiplexer
