@@ -17,7 +17,7 @@ namespace EventGridPublisher {
             var region = "westeurope";
 
             // TODO: Enter value for <topic-key>. You can find this in the "Access Keys" section in the
-            string topicKey = "rzfzsgx249aBOJi7oUVQD8bAsoNE90f/FiuvhZNW+ZM=";
+            string topicKey = "ADpqIF5hCBmAo6k1PSRqs3gHU4qzXSZr6awurjOzbPQ=";
             string topicEndpoint = $"https://{topic}.{region}-1.eventgrid.azure.net/api/events";
 
             string topicHostname = new Uri (topicEndpoint).Host;
