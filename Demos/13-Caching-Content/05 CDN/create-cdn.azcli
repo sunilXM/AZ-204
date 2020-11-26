@@ -5,6 +5,7 @@ loc=westeurope
 profile=ngprofile
 epname=ngendpoint
 acct=staticwebsite$rnd
+content='/HelloAzureCDN/dist/HelloAzureCDN/'
 
 # Take from prev script output without https:// and / at the end
 pep='staticwebsite007.z6.web.core.windows.net'
@@ -18,3 +19,11 @@ az cdn endpoint rule add -n $epname -g $grp --profile-name $profile --rule-name 
 
 # Enforce Https
 az cdn endpoint rule add -n $epname -g $grp --profile-name $profile --rule-name enforcehttps --order 2 --action-name "UrlRedirect"  --redirect-type Found --redirect-protocol HTTPS --match-variable RequestScheme --operator Equal --match-value HTTP
+
+# Preload Endpoint on Higher Level SKUs as Replication might take hours
+
+az cdn endpoint load -g $grp -n $epname --profile-name $profile --content-paths $content'index.html'
+
+# Purge 
+
+az cdn endpoint purge -g $grp -n $epname --profile-name $profile --content-paths $content'index.html'
