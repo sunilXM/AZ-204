@@ -8,9 +8,9 @@ namespace AppConfigConsole
     {
         static void Main(string[] args)
         {
-            var permissions = false;
+            var permissions = true;
             var builder = new ConfigurationBuilder();
-            var cs = "Endpoint=https://foodconfig-16057.azconfig.io;Id=zb98-l9-s0:CB5yBnGqqVOSStEOypk8;Secret=PdsoSHAyC1qZ1/4MomNPRDTQ01SbJCT1cG1BOW9trF8=";
+            var cs = "Endpoint=https://foodconfig-17830.azconfig.io;Id=pZrv-l9-s0:0Z1KF7t7l8O1N1T8G+KD;Secret=8fizNeNX5IbFzx4A4md6IdDG/Nj6RFOTrDk9vhz72Jc=";
 
             if (permissions)
             {
