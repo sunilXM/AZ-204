@@ -2,4 +2,9 @@
 
 [Azure CDN](https://docs.microsoft.com/en-us/azure/cdn/)
 
-Build Angular Project
+Build Angular Project:
+
+```
+npm i
+ng build --prod
+```
