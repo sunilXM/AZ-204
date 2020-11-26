@@ -9,6 +9,7 @@
 Build Angular Project:
 
 ```
+cd HelloAzureCDN
 npm i
 ng build --prod
 ```
