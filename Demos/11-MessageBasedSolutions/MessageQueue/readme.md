@@ -1,10 +1,12 @@
-# Message Queue
+# Azure Queue Storage
 
-Create a storage account
+[Azure Queue Storage](https://docs.microsoft.com/en-us/azure/storage/queues/)
 
-```
-az storage account create --name queuelab -g learn-df4f6803-a9dc-4327-bf70-9a2aca58b2d1 --kind StorageV2 --sku Standard_LRS
-```
+[az storage queue](https://docs.microsoft.com/en-us/cli/azure/storage/queue?view=azure-cli-latest)
+
+## Demo
+
+Execute `create-queue.azcli` to create a storage account and queue
 
 Create the application
 
@@ -12,12 +14,6 @@ Create the application
 dotnet new console -n QueueApp
 cd QueueApp
 dotnet build
-```
-
-Get your connection string and add it to program.cs
-
-```
-az storage account show-connection-string --name queuelab --resource-group learn-df4f6803-a9dc-4327-bf70-9a2aca58b2d1
 ```
 
 Add Azure Storage
@@ -37,8 +33,6 @@ Check Result
 ```
 az storage message peek --queue-name newsqueue --connection-string <connection-string>
 ```
-
-> Note: Put your connection string value into an environment variable named AZURE_STORAGE_CONNECTION_STRING to save yourself from having to type the --connection-string parameter every time!
 
 Cleanup
 

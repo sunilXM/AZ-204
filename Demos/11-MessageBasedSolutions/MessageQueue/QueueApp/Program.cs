@@ -1,57 +1,75 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Microsoft.WindowsAzure.Storage;
-using Microsoft.WindowsAzure.Storage.Queue;
+using Azure.Storage.Queues;
+using Azure.Storage.Queues.Models;
 
 namespace QueueApp {
     class Program {
 
-        const string ConnectionString = "DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=msgqueue15614;AccountKey=eIYR60micUpdJF/jsKa2P9l9amPBkfdj7Yk6kNuFZguibaMPUzMA4sjlIa4t3LyN7h4XUSS9H0QUAiMFza/hXg==";
+        const string connectionString = "DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=msgqueue15614;AccountKey=eIYR60micUpdJF/jsKa2P9l9amPBkfdj7Yk6kNuFZguibaMPUzMA4sjlIa4t3LyN7h4XUSS9H0QUAiMFza/hXg==";
 
         static async Task Main (string[] args) {
 
-            var q = "demomsgs";
-            SendArticleAsync ("{id: 1, name: 'xyz' }", q);
-            string value = await ReceiveArticleAsync (q);
-
-        }
-
-        static async Task SendArticleAsync (string newsMessage, string q) {
-            CloudStorageAccount storageAccount = CloudStorageAccount.Parse (ConnectionString);
-
-            CloudQueueClient queueClient = storageAccount.CreateCloudQueueClient ();
-
-            CloudQueue queue = queueClient.GetQueueReference (q);
-            bool createdQueue = await queue.CreateIfNotExistsAsync ();
-            if (createdQueue) {
-                Console.WriteLine ("The queue of news articles was created.");
+           QueueClient queue = new QueueClient(connectionString, "az-204-queue");
+ if (args.Length > 0)
+            {
+                string value = String.Join(" ", args);
+                await InsertMessageAsync(queue, value);
+                Console.WriteLine($"Sent: {value}");
+            }
+            else
+            {
+                string value = await RetrieveNextMessageAsync(queue);
+                Console.WriteLine($"Received: {value}");
             }
 
-            CloudQueueMessage articleMessage = new CloudQueueMessage (newsMessage);
-            await queue.AddMessageAsync (articleMessage);
+            Console.Write("Press Enter...");
+            Console.ReadLine();
         }
 
-        static CloudQueue GetQueue (string q) {
-            CloudStorageAccount storageAccount = CloudStorageAccount.Parse (ConnectionString);
+        static async Task InsertMessageAsync(QueueClient theQueue, string newMessage)
+        {
+            if (null != await theQueue.CreateIfNotExistsAsync())
+            {
+                Console.WriteLine("The queue was created.");
+            }
 
-            CloudQueueClient queueClient = storageAccount.CreateCloudQueueClient ();
-            return queueClient.GetQueueReference (q);
+            await theQueue.SendMessageAsync(newMessage);
         }
 
-        static async Task<string> ReceiveArticleAsync (string q) {
-            CloudQueue queue = GetQueue (q);
-            bool exists = await queue.ExistsAsync ();
-            if (exists) {
-                CloudQueueMessage retrievedArticle = await queue.GetMessageAsync ();
-                if (retrievedArticle != null) {
-                    string newsMessage = retrievedArticle.AsString;
-                    Console.WriteLine ($"Msg: {newsMessage}")
-                    await queue.DeleteMessageAsync (retrievedArticle);
-                    return newsMessage;
+        static async Task<string> RetrieveNextMessageAsync(QueueClient theQueue)
+        {
+            if (await theQueue.ExistsAsync())
+            {
+                QueueProperties properties = await theQueue.GetPropertiesAsync();
+
+                if (properties.ApproximateMessagesCount > 0)
+                {
+                    QueueMessage[] retrievedMessage = await theQueue.ReceiveMessagesAsync(1);
+                    string theMessage = retrievedMessage[0].MessageText;
+                    await theQueue.DeleteMessageAsync(retrievedMessage[0].MessageId, retrievedMessage[0].PopReceipt);
+                    return theMessage;
+                }
+                else
+                {
+                    Console.Write("The queue is empty. Attempt to delete it? (Y/N) ");
+                    string response = Console.ReadLine();
+
+                    if (response.ToUpper() == "Y")
+                    {
+                        await theQueue.DeleteIfExistsAsync();
+                        return "The queue was deleted.";
+                    }
+                    else
+                    {
+                        return "The queue was not deleted.";
+                    }
                 }
             }
-
-            return "<queue empty or not created>";
+            else
+            {
+                return "The queue does not exist. Add a message to the command line to create the queue and store the message.";
+            }
         }
     }
 }
