@@ -3,6 +3,7 @@ rnd=007
 grp=az204-cdn-$rnd
 loc=westeurope
 acct=staticwebsite$rnd
+path='./HelloAzureCDN/dist/HelloAzureCDN'
 
 az group create -n $grp -l $loc
 
@@ -14,6 +15,6 @@ echo "Website Key:" $key
 
 az storage blob service-properties update --account-name $acct --static-website --404-document error.html --index-document index.html
 
-az storage blob upload-batch --account-name $acct --account-key $key -s ./HelloAzureCDN/dist/HelloAzureCDN -d '$web'
+az storage blob upload-batch --account-name $acct --account-key $key -s $path -d '$web'
 
 az storage account show --name $acct -g $grp --query "primaryEndpoints.web" --output tsv
