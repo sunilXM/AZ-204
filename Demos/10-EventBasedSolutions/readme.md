@@ -19,3 +19,5 @@
 [React to state changes in your Azure services by using Event Grid](https://docs.microsoft.com/en-us/learn/modules/react-to-state-changes-using-event-grid/)
 
 [Enable reliable messaging for Big Data applications using Azure Event Hubs](https://docs.microsoft.com/en-us/learn/modules/enable-reliable-messaging-for-big-data-apps-using-event-hubs/)
+
+[Notification Hub](https://docs.microsoft.com/en-us/azure/notification-hubs/configure-notification-hub-portal-pns-settings?tabs=azure-portal)
