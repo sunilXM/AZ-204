@@ -5,7 +5,7 @@ cacheName=az204-redis-demo-$RANDOM
 
 az group create -n $grp -l $loc
 
-az redis create -l $loc -n $cacheName -g $grp --sku Basic --vm-size c0
+az redis create -l $loc -n $cacheName -g $grp --sku Standard --vm-size c0
 
 key=$(az redis list-keys -n $cacheName  -g $grp --query primaryKey)                 
 
