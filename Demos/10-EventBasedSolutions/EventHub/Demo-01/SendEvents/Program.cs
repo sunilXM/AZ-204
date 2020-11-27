@@ -6,6 +6,7 @@ using Azure.Messaging.EventHubs.Producer;
 
 namespace SendEvents {
 
+    //https://github.com/Azure/azure-sdk-for-net/issues/14068
     class Program {
         private const string connectionString = "Endpoint=sb://evthubns-29784.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=aHOIiFCkB6agh1+2re6NZzZbIWFIikbPiq1YMZSHrJ4=";
         private const string eventHubName = "evthub-29784";
