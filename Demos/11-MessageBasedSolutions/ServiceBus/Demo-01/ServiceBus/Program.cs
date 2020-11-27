@@ -6,7 +6,7 @@ using Microsoft.Azure.ServiceBus;
 
 namespace ServiceBus {
     class Program {
-        const string ServiceBusConnectionString = "<your_connection_string>";
+        const string ServiceBusConnectionString = "Endpoint=sb://sbdemons9891.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=5tMCLhZTtgBrxqnJE/99IceFq0y0rekut/j+j1U9mWw=";
         const string QueueName = "sbqueue";
         static IQueueClient queueClient;
 
@@ -14,16 +14,12 @@ namespace ServiceBus {
             const int numberOfMessages = 10;
             queueClient = new QueueClient (ServiceBusConnectionString, QueueName);
 
-            Console.WriteLine ("======================================================");
-            Console.WriteLine ("Press ENTER key to exit after sending all the messages.");
-            Console.WriteLine ("======================================================");
-
             // Send messages.
             await SendMessagesAsync (numberOfMessages);
 
-            Console.ReadKey ();
-
             await queueClient.CloseAsync ();
+
+            Console.ReadLine();
         }
 
         static async Task SendMessagesAsync (int numberOfMessagesToSend) {
