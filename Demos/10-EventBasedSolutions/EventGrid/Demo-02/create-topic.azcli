@@ -1,8 +1,8 @@
 # rnd=$RANDOM
 rnd=10119
 loc=westeurope
-grp=az204-evtgridcustom-$rnd
-topic=foodorder
+grp=az204-evtgrid-$rnd
+topic=foodorder-topic
 storage=foodorder$rnd
 app=foodorder-$rnd
 
@@ -15,8 +15,8 @@ az eventgrid topic create --resource-group $grp --name $topic --location $loc
 endpoint=$(az eventgrid topic show --name $topic -g $grp --query "endpoint" --output tsv)
 key=$(az eventgrid topic key list --name $topic -g $grp --query "key1" --output tsv)
 
-echo $endpoint
-echo $key
+echo 'Endpoint: ' $endpoint
+echo 'Key: ' $key
 
 # create function app
 

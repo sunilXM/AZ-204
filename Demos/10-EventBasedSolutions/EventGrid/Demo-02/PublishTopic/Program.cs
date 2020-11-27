@@ -4,20 +4,17 @@ using Microsoft.Azure.EventGrid;
 using Microsoft.Azure.EventGrid.Models;
 using Newtonsoft.Json;
 
-namespace EventGridPublisher {
-    class ContosoItemReceivedEventData {
-        [JsonProperty (PropertyName = "itemSku")]
-        public string ItemSku { get; set; }
-    }
-
-    class Program {
-        static void Main (string[] args) {
-
-            var topic = "foodorder";
+namespace PublishTopic
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var topic = "foodorder-topic";
             var region = "westeurope";
 
-            // TODO: Enter value for <topic-key>. You can find this in the "Access Keys" section in the
-            string topicKey = "ADpqIF5hCBmAo6k1PSRqs3gHU4qzXSZr6awurjOzbPQ=";
+            // TODO: Enter value for topic-key from create script
+            string topicKey = "N9RiTUVCe3iv0+AaMtsig4438DVriVD/EyDOfSjiIVk=";
             string topicEndpoint = $"https://{topic}.{region}-1.eventgrid.azure.net/api/events";
 
             string topicHostname = new Uri (topicEndpoint).Host;
@@ -46,5 +43,10 @@ namespace EventGridPublisher {
 
             return eventsList;
         }
+    }
+
+    class ContosoItemReceivedEventData {
+        [JsonProperty (PropertyName = "itemSku")]
+        public string ItemSku { get; set; }
     }
 }
