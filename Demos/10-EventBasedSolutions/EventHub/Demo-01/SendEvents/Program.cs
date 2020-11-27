@@ -7,8 +7,8 @@ using Azure.Messaging.EventHubs.Producer;
 namespace SendEvents {
 
     class Program {
-        private const string connectionString = "Endpoint=sb://evthubns-31066.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=MVyp85MzQarvVmOmoQPmwd9Aj8QHpoPucIvJYtpEMJ4=";
-        private const string eventHubName = "evthubdemo-31066";
+        private const string connectionString = "Endpoint=sb://evthubns-29784.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=aHOIiFCkB6agh1+2re6NZzZbIWFIikbPiq1YMZSHrJ4=";
+        private const string eventHubName = "evthub-29784";
 
         static async Task Main () {
             // Create a producer client that you can use to send events to an event hub

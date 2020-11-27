@@ -10,9 +10,9 @@ namespace ReceiveEvents
 {
     class Program
     {
-        private const string connectionString = "Endpoint=sb://evthubns-31066.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=MVyp85MzQarvVmOmoQPmwd9Aj8QHpoPucIvJYtpEMJ4=";
-        private const string eventHubName = "evthubdemo-31066";
-        private const string blobStorageConnectionString = "DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=eventhubdemo31066;AccountKey=4q8nmvVr26sfuVFryvMKgXKFO7XJlsspAUO+AD/RHSQLq5bb3s7TQ2z0etqfZp2Djm8iDHaGsPWHb30Y93/alQ==";
+        private const string connectionString = "Endpoint=sb://evthubns-29784.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=aHOIiFCkB6agh1+2re6NZzZbIWFIikbPiq1YMZSHrJ4=";
+        private const string eventHubName = "evthub-29784";
+        private const string blobStorageConnectionString = "DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=eventhub29784;AccountKey=gtfKFM3di00B1medKY96wGRG+AzCTnJX5tdAFX4LvB8/Dh9Ntg398/3iBnnmMAjvIuYHu31zLpu2b9CeAm+/IQ==";
         private const string blobContainerName = "messages";
         static async Task Main()
         {

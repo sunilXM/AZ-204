@@ -2,8 +2,8 @@ rnd=$RANDOM
 loc=westeurope
 grp=az204-evthub-$rnd
 namespace=evthubns-$rnd
-hub=evthubdemo-$rnd
-storage=eventhubdemo$rnd
+hub=evthub-$rnd
+storage=eventhub$rnd
 container=messages
 
 az group create --name $grp --location $loc
@@ -11,6 +11,7 @@ az group create --name $grp --location $loc
 # Create Group & Hub, List permissions
 
 az eventhubs namespace create -n $namespace -g $grp -l $loc --sku Basic
+
 nsconStr=$(az eventhubs namespace authorization-rule keys list --name RootManageSharedAccessKey --namespace-name $namespace -g $grp | jq .primaryConnectionString)
 
 echo "primaryConnectionString to use for .NET Core project: $nsconStr"
