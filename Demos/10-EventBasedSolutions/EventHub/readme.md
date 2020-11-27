@@ -1,7 +1,8 @@
 # Event Hubs
 
 [Event Hub](https://docs.microsoft.com/en-us/azure/event-hubs/)
-[Event Hub](https://docs.microsoft.com/en-us/azure/event-hubs/)
+
+[az eventhubs](https://docs.microsoft.com/en-us/cli/azure/eventhubs?view=azure-cli-latest)
 
 # Lab
 
