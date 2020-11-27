@@ -6,20 +6,20 @@ using Azure.Storage.Queues.Models;
 namespace QueueApp {
     class Program {
 
-        const string connectionString = "DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=msgqueue15614;AccountKey=eIYR60micUpdJF/jsKa2P9l9amPBkfdj7Yk6kNuFZguibaMPUzMA4sjlIa4t3LyN7h4XUSS9H0QUAiMFza/hXg==";
+        const string connectionString = "DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=msgqueue20226;AccountKey=cHcU9VlTbOGtKcCZPQjRx+hv5Kf49MA76W5aGK4uHHCCItAv5EFwgpFEEh1mxIW32Z9kWOkXTmCbOypVl25XhQ==";
 
         static async Task Main (string[] args) {
 
            QueueClient queue = new QueueClient(connectionString, "az-204-queue");
- if (args.Length > 0)
+            if (true)
             {
-                string value = String.Join(" ", args);
+                var value = "My demo value";
                 await InsertMessageAsync(queue, value);
                 Console.WriteLine($"Sent: {value}");
             }
             else
             {
-                string value = await RetrieveNextMessageAsync(queue);
+                var value = await RetrieveNextMessageAsync(queue);
                 Console.WriteLine($"Received: {value}");
             }
 
