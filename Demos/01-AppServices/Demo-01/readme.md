@@ -1,5 +1,11 @@
 # Publish to App Service
 
+## Deploy using VS Code Azure Tools
+
+- Demonstrate Extensions
+
+## Deploy using Publishing Profile
+
 Navigate to `./Properties/PublishProfile`
 
 Add a file called `azure.pubxml` with the following content:

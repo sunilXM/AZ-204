@@ -1,6 +1,11 @@
-# Deploy .NET Core Api
+# Deploy .NET Core Api using GitHub Actions
+
+- Provisioning using Azure CLI
+- Deploy using GitHub Actions
 
 > Note: FoodApp is a seperate Git Repo: [https://github.com/ARambazamba/FoodApp](https://github.com/ARambazamba/FoodApp)
+
+## Github Actions
 
 Deploy Api using [GitHub Actions](https://github.com/Azure/actions)
 
