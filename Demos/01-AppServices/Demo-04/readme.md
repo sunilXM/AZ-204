@@ -1,6 +1,7 @@
 # Web App for Containers
 
-Execute `create-webapp-container.azcli`
+- Explain Docker Build
+- Execute `create-webapp-container.azcli`
 
 ```
 rnd=$RANDOM
