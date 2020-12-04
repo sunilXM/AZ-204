@@ -5,7 +5,7 @@ loc=westeurope
 profile=ngprofile
 epname=ngendpoint
 acct=staticwebsite$rnd
-content='/HelloAzureCDN/dist/HelloAzureCDN/'
+content='/FoodUI/dist/FoodUI/'
 
 # Take from prev script output without https:// and / at the end
 pep='staticwebsite007.z6.web.core.windows.net'
