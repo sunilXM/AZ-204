@@ -1,49 +1,5 @@
 # Publishing
 
-## Firebase
-
-## Deploy to Firebase
-
-Install Tools:
-
-```
-npm install -g firebase-tools
-```
-
-Deploy:
-
-```
-firebase login
-firebase init
-firebase deploy
-```
-
-# Docker & Kubernetes Basics
-
-## Setup Window Subsystem for Linux - Ubuntu
-
-[Windows Subsysstem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
-
-[Docker for WSL Preview](https://docs.docker.com/docker-for-windows/wsl-tech-preview/)
-
-To check the WSL mode, run:
-
-```****
-wsl -l -v
-```
-
-To upgrade to v2, run:
-
-```
-wsl --set-version Ubuntu 2
-```
-
-![wsl2](_images/wsl2.png)
-
-> Note: if you have troubles running docker on wsl make sure you installed docker desktop AFTER setting wsl to 2
-
----
-
 ## Docker
 
 Download an Image
@@ -71,8 +27,6 @@ Prefexing prod keeps Intellisense in file and allows you to have more than one D
 ---
 
 ## Containerize a 3-Tier Application
-
-![App](_images/app.png)
 
 ### Run SQL for Linux in Container
 
@@ -140,7 +94,7 @@ Attach a shell to the docker container & investigate `/usr/share/nginx/html`
 Build SkillsUI image:
 
 ```
-docker build --rm -f "app.prod.dockerfile" -t arambazamba/skillsui .
+docker build --rm -f "Dockerfile" -t arambazamba/skillsui .
 ```
 
 Run SkillsUI:
