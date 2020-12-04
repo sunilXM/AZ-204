@@ -1,7 +1,7 @@
-rnd=$RANDOM
-grp=az204-keyvault-$rnd
+rnd=007
+grp=az204-secure-solutions-$rnd
 loc=westeurope
-vault=foodvault
+vault=foodvault-$rnd
 
 az group create -n $grp -l $loc
 
@@ -9,6 +9,6 @@ az keyvault create -l $loc -n $vault -g $grp --sku standard --enabled-for-disk-e
 
 az keyvault key list --vault-name $vault
 
-az keyvault secret set --vault-name $vault --name "DBConnection" --value "Data Source=server2020.integrations.at;Initial Catalog=Vouchers;Persist Security Info=True;User ID=dbuser;Password=dbpassword"
+az keyvault secret set --vault-name $vault --name "DBConnection" --value "Data Source=server2020.integrations.at;Initial Catalog=FoodDB;Persist Security Info=True;User ID=dbuser;Password=dbpassword"
 
 az keyvault secret show --name "DBConnection" --vault-name $vault

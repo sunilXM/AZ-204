@@ -1,14 +1,8 @@
 # Key Vault
 
-Create Key Vault & Get Key
+[Azure Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/)
 
-```
-az keyvault create \
- --resource-group <resource-group> \
- --name <your-unique-vault-name>
-
-$key = Add-AzureKeyVaultKey -VaultName 'contoso' -Name 'MyFirstKey' -Destination 'HSM'
-```
+[az keyvault](https://docs.microsoft.com/en-us/cli/azure/keyvault?view=azure-cli-latest)
 
 ## Additional Labs & Walkthroughs
 
