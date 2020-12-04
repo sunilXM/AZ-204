@@ -10,6 +10,9 @@
 Deploy Api using [GitHub Actions](https://github.com/Azure/actions)
 
 ```yaml
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
 name: Deploy FoodApi
 
 on:
@@ -22,6 +25,7 @@ jobs:
     runs-on: windows-latest
 
     steps:
+      - name: Checkout Code
       - uses: actions/checkout@master
 
       - name: Set up .NET Core
@@ -37,6 +41,12 @@ jobs:
 
       - name: dotnet publish
         run: dotnet publish ${{ github.workspace }}/FoodApi/FoodApi.csproj -c Release -o ${{env.DOTNET_ROOT}}/foodapi
+
+      - name: Azure Login
+        uses: Azure/login@v1.1
+        with:
+          # Paste output of `az ad sp create-for-rbac` as value of secret variable: AZURE_CREDENTIALS
+          creds: ""
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
