@@ -1,4 +1,4 @@
-# Managed Idenity
+# Using Managed Idenity
 
 > Note: FoodApp is a Git Submodule taken from [https://github.com/ARambazamba/Managed-Identity-App](https://github.com/ARambazamba/Managed-Identity-App)
 
