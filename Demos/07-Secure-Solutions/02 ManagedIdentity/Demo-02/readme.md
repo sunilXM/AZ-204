@@ -1,11 +1,7 @@
 # Using Managed Idenity
 
-> Note: FoodApp is a Git Submodule taken from [https://github.com/ARambazamba/Managed-Identity-App](https://github.com/ARambazamba/Managed-Identity-App)
+Sample uses Managed Identity App from [GitHub](https://github.com/ARambazamba/ManagedIdentityApp)
 
-Tasks:
-
-- Create SQL DB - `create-db.azcli`
-- Migrate to Azure SQL - `apply-migrations.ps1`
-- Deploy to Azure - `deploy-to-azure.azcli`
-
-[Secure Azure SQL Database connection from App Service using a managed identity](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-connect-msi)
+- Explanin Microsoft.Azure.Services.AppAuthentication
+- Explain .NET 5 support
+- Show Deployment using GitHub Actions

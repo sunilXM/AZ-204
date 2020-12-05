@@ -1,6 +1,6 @@
-# VS Code Function App
+# Azure Function Core Tools
 
-Install azure-function-tools
+Install azure-function-tools:
 
 ```
 npm i -g azure-functions-core-tools

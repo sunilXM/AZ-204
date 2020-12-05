@@ -10,7 +10,7 @@ gitrepo="https://github.com/ARambazamba/ManagedIdentityApp"
 
 az appservice plan create -n $plan  -g $grp --sku FREE
 az webapp create -g $grp --plan $plan --name $app
-az webapp deployment source config -n $app -g $grp -u $gitrepo --branch master
+az webapp deployment source config -n $app -g $grp 
 
 az webapp identity assign -g $grp -n $app
 mi=$(az webapp identity show  -g $grp -n $app | jq .principalId)

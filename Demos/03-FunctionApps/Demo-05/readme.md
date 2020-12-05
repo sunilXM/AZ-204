@@ -1,5 +1,3 @@
-# Durable Functions
+# Using Azure Functions with SharePoint Webhooks
 
-Hit F5 & execute Request: http://localhost:7071/api/orchestrators/HelloOrchestrator
-
-[Durable Functions Walkthrough](https://docs.microsoft.com/en-us/azure/azure-functions/durable/quickstart-js-vscode)
+Sample taken from [here](https://docs.microsoft.com/en-us/sharepoint/dev/apis/webhooks/sharepoint-webhooks-using-azure-functions)
