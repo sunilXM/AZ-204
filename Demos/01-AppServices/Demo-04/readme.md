@@ -6,7 +6,6 @@
 Demo Steps:
 
 - Creat App Service Plan & Deploy Api using GitHub Actions
-- Use Hybrid Connections
 - Swap Slots
 
 > Note: FoodApp is a seperate Git Repo: [https://github.com/ARambazamba/FoodApp](https://github.com/ARambazamba/FoodApp)

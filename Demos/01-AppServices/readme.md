@@ -22,7 +22,6 @@
 - Deploy Static HTML App using Git
 - Web App for Containers
 - Deploy Api using GitHub Actions
-- Hybrid Connections
 - Swap Slots
 
 ## Additional Labs & Walkthroughs
