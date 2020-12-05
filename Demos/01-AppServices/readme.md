@@ -4,7 +4,7 @@
 
 [App Service Environments](https://docs.microsoft.com/en-us/azure/app-service/environment/intro)
 
-https://azure.microsoft.com/en-us/overview/what-is-azure/iaas/#products
+[What is IaaS](https://azure.microsoft.com/en-us/overview/what-is-azure/iaas/#products)
 
 ## CLI Reference
 
@@ -21,8 +21,9 @@ https://azure.microsoft.com/en-us/overview/what-is-azure/iaas/#products
 - Create App Service & Publish .NET Core Api using Portal & CLI
 - Deploy Static HTML App using Git
 - Web App for Containers
+- Deploy Api using GitHub Actions
 - Hybrid Connections
-- Autoscale
+- Swap Slots
 
 ## Additional Labs & Walkthroughs
 

@@ -2,7 +2,7 @@
 rnd=007
 grp=az204-foodapp
 appPlan=foodplan-$rnd
-web=foodapi-$rnd
+app=foodapi-$rnd
 loc=westeurope
 
 # create a resource group
@@ -15,8 +15,13 @@ az appservice plan create -n $appPlan -g $grp --sku S1
 az webapp list-runtimes
 
 # create a Web App - change runtime stack to .NET 5 manually
-az webapp create -n $web -g $grp --plan $appPlan --runtime "DOTNET|5.0"
+az webapp create -n $app -g $grp --plan $appPlan --runtime "DOTNET|5.0"
 
 # print out the FQDN for the Web App
-# modify /Properies/PublishProfiles/azure.pubxml
 echo "Web Url: http://$web.azurewebsites.net"
+
+# Deploy using Github Actions in Portal
+
+# Create Deployment Slot
+
+az webapp deployment slot create -n $app -g $grp --slot staging
