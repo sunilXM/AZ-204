@@ -7,7 +7,7 @@ npm i -g azure-functions-core-tools
 npm i -g azure-functions-core-tools@3
 ```
 
-> Note: Documentaion can be found on [Github](https://github.com/Azure/azure-functions-core-tools) or on [docs.microsoft.com](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=windows%2Ccsharp%2Cbash)
+> Note: Documentaion can be found on [Github](https://github.com/Azure/azure-functions-core-tools) or on [Work with Azure Functions Core Tools](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=windows%2Ccsharp%2Cbash)
 
 Scaffold Project:
 
