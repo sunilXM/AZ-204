@@ -1,9 +1,11 @@
-rnd=$RANDOM
-grp=az204-identity-$rnd
+rnd=007
+grp=az204-secure-solutions-$rnd
 loc=westeurope
-identity=userassigned-identity-$rnd
-vmname=identityvm-$rnd
-adminuser=demoadmin
+identity=ua-identity-$rnd
+vm=identityvm-$rnd
+admin=az204admin
+# use key vault from prev demo - change vault name in script
+vault=foodvault-$rnd
 
 az group create -n $grp -l $loc
 
@@ -11,32 +13,28 @@ az group create -n $grp -l $loc
 
 az identity create -g $grp -l $loc -n $identity 
 
+mi=$(az identity show -n $identity -g $grp | jq .principalId)
+
 clientId=$(az identity show -n $identity -g $grp | jq .clientId)
 
-echo "client-id: $clientId"
+echo "managed identity object id: $mi"
 
-# use key vault from prev demo - change vault name in script
-
-vault=labvault-16164
+echo "managed identity client id: $clientId"
 
 # create a vm
 
-az vm create -n $vmname -g $grp --image UbuntuLTS --size Standard_B1ms --generate-ssh-keys --admin-username $adminuser
+az vm create -n $vm -g $grp --image UbuntuLTS --size Standard_B1ms --generate-ssh-keys --admin-username $admin
 
 # list assigned identities
 
-az vm identity show -g $grp -n $vmname
+az vm identity show -g $grp -n $vm
 
-ip=$(az vm show -d -g $grp -n $vmname --query publicIps)
+ip=$(az vm show -d -g $grp -n $vm --query publicIps)
 
 echo "ip address: $ip"
 
-az vm identity assign -g $grp -n $vmname --identities $identity
+# assign identity to vm & kv ... might have to take val from ui
 
-# connect to vm & get token
+az vm identity assign -g $grp -n $vm --identities $identity
 
-ssh $adminuser@52.137.22.38
-
-curl -H Metadata:true "http://169.254.169.254/metadata/identity/oauth2/token?api-version=2018-02-01&resource=https://vault.azure.net&client_id=<clientid>"
-
-./getSecret.sh $(./getToken.sh | jq -j .access_token)
+az keyvault set-policy -n $vault --object-id $mi --secret-permissions list get
