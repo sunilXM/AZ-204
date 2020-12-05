@@ -14,6 +14,14 @@
 
 [Azure App Services](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice)
 
+## Demos
+
+- Create App Service & Publish .NET Core Api using Portal & CLI
+- Deploy Static HTML App using Git
+- Web App for Containers
+- Hybrid Connections
+- Autoscale
+
 ## Additional Labs & Walkthroughs
 
 [Learning Path - Deploy a website to Azure with Azure App Service](https://docs.microsoft.com/en-us/learn/paths/deploy-a-website-with-azure-app-service/)

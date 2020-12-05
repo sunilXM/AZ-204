@@ -1,7 +1,7 @@
 # rnd=$RANDOM
-rnd=9099
-grp=az204-foodapi-$rnd
-appPlan=foodapi-$rnd
+rnd=007
+grp=az204-foodapp
+appPlan=foodplan-$rnd
 web=foodapi-$rnd
 loc=westeurope
 
@@ -9,13 +9,13 @@ loc=westeurope
 az group create -n $grp -l $loc
 
 # create an App Service plan
-az appservice plan create -n $appPlan -g $grp --sku FREE
+az appservice plan create -n $appPlan -g $grp --sku S1
 
 # list runtrimes
 az webapp list-runtimes
 
 # create a Web App - change runtime stack to .NET 5 manually
-az webapp create -n $web -g $grp --plan $appPlan 
+az webapp create -n $web -g $grp --plan $appPlan --runtime "DOTNET|5.0"
 
 # print out the FQDN for the Web App
 # modify /Properies/PublishProfiles/azure.pubxml

@@ -1,4 +1,4 @@
-# Publish to App Service
+# Create App Service & Publish .NET Core Api using Portal & CLI
 
 ## Deploy using VS Code Azure Tools
 
