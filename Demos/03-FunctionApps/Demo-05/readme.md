@@ -2,6 +2,12 @@
 
 > Note: Sample taken from [here](https://docs.microsoft.com/en-us/sharepoint/dev/apis/webhooks/sharepoint-webhooks-using-azure-functions)
 
+![subscribe](_images/webhook-sample-call-webhook.png)
+
+![process](_images/webhook-sample-async-getchanges.png)
+
+## Demo
+
 AzFunction implementation code:
 
 ```C#
