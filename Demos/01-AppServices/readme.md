@@ -4,6 +4,8 @@
 
 [App Service Environments](https://docs.microsoft.com/en-us/azure/app-service/environment/intro)
 
+https://azure.microsoft.com/en-us/overview/what-is-azure/iaas/#products
+
 ## CLI Reference
 
 [az appservice](https://docs.microsoft.com/en-us/cli/azure/appservice?view=azure-cli-latest)
