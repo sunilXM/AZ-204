@@ -1,13 +1,16 @@
 # Install Azure PowerShell - Execute using line by line using selection & F8
 
 Install-Module -Name PowerShellGet -Force
-Install-Module -Name Az -AllowClobber -Scope CurrentUser
+Install-Module -Name Az -AllowClobber
 
 # Login - run this from class ps to see the popup
 Connect-AzAccount
 
+$rnd = Get-Random
 $VMSize = "Standard_B1ms"
-$grp = "az-204-vm"
+$grp = "az-204-vmgrp-$rnd"
+
+# The credential of the designated Windows Admin - Not your credential :-)
 $cred = Get-Credential
 
 New-AzResourceGroup -Name $grp -Location westeurope

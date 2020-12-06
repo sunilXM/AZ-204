@@ -1,12 +1,9 @@
-# Create an Ubuntu VM
-# Make sure you have installed the following Extension https://marketplace.visualstudio.com/items?itemName=ms-vscode.azurecli
-# Use Ctrl + ä to execute the current line
-
-rnd=$RANDOM
+# rnd=$RANDOM
+rnd=007
 loc=westeurope
-grp="vmgrp-$rnd"
+grp="az-204-vmgrp-$rnd"
 vmname=ubuntuvm-$rnd
-adminuser=demoadmin
+adminuser=az204admin
 
 az login
 
