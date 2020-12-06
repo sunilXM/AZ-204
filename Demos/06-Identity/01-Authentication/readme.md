@@ -2,13 +2,7 @@
 
 [Azure AD](https://docs.microsoft.com/de-at/azure/active-directory/fundamentals/active-directory-whatis)
 
-[ADAL](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-authentication-libraries)
-
 [MSAL](https://docs.microsoft.com/en-us/azure/active-directory/develop/reference-v2-libraries)
-
-Permissions for MSAL App:
-
-![msal](_images/daemon-permissions.png)
 
 [Register Postman Azure AD](https://docs.microsoft.com/en-us/azure/digital-twins/how-to-configure-postman)
 
