@@ -54,7 +54,7 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 - Web App for Container
 - Azure Container Instances
 
-Optional Demos (if time permitts)
+Optional Demos - if time permitts
 
 - Introduction AKS
 - Introduction Helm
