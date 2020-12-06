@@ -1,41 +1,11 @@
-# Azure Kubernetes Service
+# Continers
 
-[Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/)
+## Web App for Container
 
-[az aks Commands Overview](https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest)
+Execute `create-webapp-container.azcli`
 
-[DevSpaces Intro](https://docs.microsoft.com/en-us/azure/dev-spaces/quickstart-team-development)
+## Containers
 
-#### Create AKS Cluster
+[Azure Container Instances](https://docs.microsoft.com/en-us/azure/container-instances/)
 
-> Note: Use FoodApp from folder "99 FoodApp"
-
-Install kubectl command line client locally:
-
-`az aks install-cli`
-
-> Note: You might need to set a path to your system env variables
-
-Create resource group:
-
-`az group create -name az-204 --location westeurope`
-
-Create AKS cluster:
-
-`az aks create --resource-group az-204 --name foodcluster --node-count 1 --enable-addons monitoring --generate-ssh-keys`
-
-Get credentials for the Kubernets cluster:
-
-`az aks get-credentials --resource-group az-204 --name foodcluster`
-
-Get a list of cluster nodes:
-
-`kubectl get nodes`
-
-Apply the yaml
-
-`kubectl apply -f foodui.yaml`
-
-Get the serive IP and use it on the assigned port
-
-kubectl get service foodui --watch
+Execute `create-container-instance.azcli`

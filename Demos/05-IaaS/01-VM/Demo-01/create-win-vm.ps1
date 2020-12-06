@@ -11,6 +11,7 @@ $VMSize = "Standard_B1ms"
 $grp = "az-204-vmgrp-$rnd"
 
 # The credential of the designated Windows Admin - Not your credential :-)
+# Use: az204admin PWD: P@$$w0rd1234!
 $cred = Get-Credential
 
 New-AzResourceGroup -Name $grp -Location westeurope

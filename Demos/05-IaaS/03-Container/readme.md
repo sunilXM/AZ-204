@@ -46,6 +46,19 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
 [Azure Dev Spaces](https://marketplace.visualstudio.com/items?itemName=azuredevspaces.azds)
 
+## Demos
+
+- Build Image and Upload to DockerHub
+- Create Container Registry
+- Build using Build Task from ACR
+- Web App for Container
+- Azure Container Instances
+
+Optional Demos (if time permitts)
+
+- Introduction AKS
+- Introduction Helm
+
 ## Additional Labs & Walkthroughs
 
 [Learning Path - Administer containers in Azure](https://docs.microsoft.com/en-us/learn/paths/administer-containers-in-azure/)

@@ -1,85 +1,41 @@
-# Helm
+# Azure Kubernetes Service
 
-[Helm Documentation](https://helm.sh/)
+[Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/azure/aks/)
 
-## Installation on Windows
+[az aks Commands Overview](https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest)
 
-[Get Chocolatey](https://chocolatey.org/install)
+[DevSpaces Intro](https://docs.microsoft.com/en-us/azure/dev-spaces/quickstart-team-development)
 
-`choco install kubernetes-helm`
+#### Create AKS Cluster
 
-## Installation on Linux or WSL
+> Note: Use FoodApp from Demo-01
 
-```
-curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
-chmod 700 get_helm.sh
-./get_helm.sh
-```
+Install kubectl command line client locally:
 
-## Using Helm
+`az aks install-cli`
 
-[Using Helm](https://helm.sh/docs/intro/using_helm/)
+> Note: You might need to set a path to your system env variables
 
-[Helm CLI Reference](https://helm.sh/docs/helm/)
+Create resource group:
 
-Sample: https://github.com/Azure-Samples/helm-charts/tree/master/chart-source/azure-vote
+`az group create -name az-204 --location westeurope`
 
-List Repos:
+Create AKS cluster:
 
-```
-helm repo list
-```
+`az aks create --resource-group az-204 --name foodcluster --node-count 1 --enable-addons monitoring --generate-ssh-keys`
 
-Install a Repo:
+Get credentials for the Kubernets cluster:
 
-helm install voting azure-samples/azure-vote
+`az aks get-credentials --resource-group az-204 --name foodcluster`
 
-Creating a Helm Chart:
+Get a list of cluster nodes:
 
-```
-helm create node-frontend
-```
+`kubectl get nodes`
 
-List Cluster:
+Apply the yaml
 
-```
-kubectl get service --watch
-```
+`kubectl apply -f foodui.yaml`
 
-Install Helm Chart:
+Get the serive IP and use it on the assigned port
 
-```
-helm install node-frontend node-frontend/
-```
-
-List installed helm charts:
-
-```
-helm ls
-```
-
-Uninstall a helm chart:
-
-```
-helm uninstall node-frontend
-```
-
-List the pods:
-
-```
-kubectl get pods
-```
-
-Enable Port forwarding using [Kubernetes VS Code Extension](https://marketplace.visualstudio.com/items?itemName=ms-kubernetes-tools.vscode-kubernetes-tools):
-
-![port-forward](../_images/port-forward.jpg)
-
-> Note: Chose any vaild config for your machine - ie: 8099:80
-
-Browse to Pod:
-
-```
-http://localhost:8099
-```
-
-![browse](../_images/browse.jpg)
+kubectl get service foodui --watch

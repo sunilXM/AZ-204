@@ -1,5 +1,5 @@
 # rnd=$RANDOM
-rnd=007
+rnd=766433906
 loc=westeurope
 grp="az-204-vmgrp-$rnd"
 vm=winVM

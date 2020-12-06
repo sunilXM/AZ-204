@@ -5,7 +5,7 @@ vault=foodvault-$rnd
 
 az group create -n $grp -l $loc
 
-az keyvault create -l $loc -n $vault -g $grp --sku standard --enabled-for-disk-encryption true 
+az keyvault create -l $loc -n $vault -g $grp --sku standard 
 
 az keyvault key list --vault-name $vault
 
