@@ -3,8 +3,8 @@ rnd=007
 loc=westeurope
 grp=az204-cosmosdb-$rnd
 acct=az204-cosmosdb-$rnd
-dbname=persondb
-container=persons
+dbname=fooddb
+container=food
 
 az group create -n $grp -l $loc
 
