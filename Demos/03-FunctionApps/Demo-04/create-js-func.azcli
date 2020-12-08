@@ -1,0 +1,16 @@
+# rnd=$RANDOM
+rnd=007
+grp=az204-js-$rnd
+loc=westeurope
+app=javascript-$rnd
+storage=javascript$rnd
+
+az group create --name $grp --location $loc
+
+az storage account  create -n $storage -g $grp 
+
+az functionapp create -n $app -g $grp --storage-account $storage --consumption-plan-location $loc --runtime dotnet --functions-version 2
+
+echo "Funtions app created: $app"
+
+az functionapp list
