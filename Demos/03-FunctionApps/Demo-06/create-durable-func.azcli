@@ -1,5 +1,5 @@
 # rnd=$RANDOM
-rnd=007
+rnd=008
 grp=az204-durable-$rnd
 loc=westeurope
 app=durablefx-$rnd
@@ -9,7 +9,7 @@ az group create --name $grp --location $loc
 
 az storage account  create -n $storage -g $grp 
 
-az functionapp create -n $app -g $grp --storage-account $storage --consumption-plan-location $loc --runtime dotnet --functions-version 2
+az functionapp create -n $app -g $grp --storage-account $storage --consumption-plan-location $loc --runtime node --functions-version 2
 
 echo "Funtions app created: $app"
 
