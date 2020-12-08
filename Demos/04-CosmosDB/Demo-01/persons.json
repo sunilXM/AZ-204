@@ -16,14 +16,14 @@
   {
     "id": "1002",
     "name": "Andy",
-    "email": "reza@test.com",
+    "email": "andy@test.com",
     "city": "Toronto"
   },
 
   {
     "id": "1003",
-    "name": "Andy",
-    "email": "reza@test.com",
+    "name": "Mike",
+    "email": "mike@test.com",
     "city": "Boston"
   }
 ]
