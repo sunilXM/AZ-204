@@ -9,7 +9,7 @@ az group create --name $grp --location $loc
 
 az storage account  create -n $storage -g $grp 
 
-az functionapp create -n $app -g $grp --storage-account $storage --consumption-plan-location $loc --runtime dotnet --functions-version 2
+az functionapp create -n $app -g $grp --storage-account $storage --consumption-plan-location $loc --runtime node
 
 echo "Funtions app created: $app"
 
