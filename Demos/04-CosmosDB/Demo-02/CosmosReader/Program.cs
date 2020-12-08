@@ -20,7 +20,7 @@ namespace CosmosReader {
 
             cosmosClient = new CosmosClient (conStr);
             database = cosmosClient.GetDatabase ("productsdb");
-            container = database.GetContainer ("Products");
+            container = database.GetContainer ("products");
 
             var sqlQueryText = "SELECT * FROM c WHERE c.Color = 'Red'";
             QueryDefinition queryDefinition = new QueryDefinition (sqlQueryText);
