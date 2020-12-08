@@ -1,4 +1,5 @@
-rnd=$RANDOM
+# rnd=$RANDOM
+rnd=007
 grp=az204-wacontainers-$rnd
 appPlan=wacontainers$rnd
 app=foodui-$rnd

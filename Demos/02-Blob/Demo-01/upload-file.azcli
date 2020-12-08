@@ -1,4 +1,4 @@
-rnd=$RANDOM
+rnd=0078
 grp=az204-storage-$rnd
 loc=westeurope
 acct=storage$rnd
