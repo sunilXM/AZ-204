@@ -2,7 +2,7 @@
 rnd=007
 loc=westeurope
 grp=az204-cosmosdb-$rnd
-acct=cosmosacct$rnd
+acct=az204-cosmosacct-$rnd
 dbname=persondb
 
 az group create --name $grp --location $loc
