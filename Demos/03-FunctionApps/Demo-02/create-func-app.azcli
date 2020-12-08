@@ -4,7 +4,7 @@ loc=westeurope
 app=vscodeapp-$rnd
 storage=vscodeapp$rnd
 
-az group create --name $grp --location $loc
+az group create -n $grp -l $loc
 
 az storage account  create -n $storage -g $grp 
 
