@@ -215,7 +215,7 @@ git pull / git push
 
 > Note: You can use this guide to refresh changes I made during the week to your forked repo
 
-Original Repo could be: `https://github.com/ARambazamba/AdvancedAngularDevelopment` where `ARambazamba` is the `original-owner-github-username` and `AdvancedAngularDevelopment` is the `reponame`
+Original Repo could be: `https://github.com/ARambazamba/AZ-204` where `ARambazamba` is the `original-owner-github-username` and `AZ-204` is the `reponame`
 
 ### Listing the current Remotes
 
