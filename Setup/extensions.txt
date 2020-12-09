@@ -1,0 +1,4 @@
+ms-vscode.azure-account
+ms-vscode.vscode-node-azure-pack
+ms-dotnettools.csharp
+Angular.ng-template	
