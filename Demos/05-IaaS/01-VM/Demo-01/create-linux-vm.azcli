@@ -1,7 +1,7 @@
 # rnd=$RANDOM
 rnd=007
 loc=westeurope
-grp="az-204-vmgrp-$rnd"
+grp="az204-vmgrp-$rnd"
 vmname=ubuntuvm-$rnd
 adminuser=az204admin
 
