@@ -1,7 +1,7 @@
-rnd=$RANDOM
+rnd=007
 grp=az204-aks-$rnd
 loc=westeurope
-aks=testcluster-$rnd
+aks=foodcluster-$rnd
 
 # Install kubectl command line client locally + only required once otherwise err
 
@@ -31,11 +31,11 @@ kubectl get nodes
 
 # Apply the yaml
 
-`kubectl apply -f foodui.yaml`
+kubectl apply -f foodui.yaml
 
 # Get the serive IP and use it on the assigned port
 
 kubectl get service foodui --watch
 
 # port taken from yaml
-# ie: http://51.124.79.235:8081
+# ie: http://20.73.111.85:8081
