@@ -1,4 +1,4 @@
-rnd=$RANDOM
+rnd=007
 grp=az204-logicapp-$rnd
 loc=westeurope
 kind=TextAnalytics
