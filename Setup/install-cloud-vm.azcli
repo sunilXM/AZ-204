@@ -9,6 +9,8 @@ az group create -n $grp -l $loc
 
 az vm create -g $grp -n $vmname --admin-username $user --admin-password $pwd --image windows-10-20h2-vhd-server-prod-stage --size Standard_E2s_v3
 
+az vm run-command invoke  --command-id RunPowerShellScript -name $vmname -g $grp --scripts https://raw.githubusercontent.com/ARambazamba/AZ-204/master/Setup/Windows/install-chocolatey.ps1
+
 az vm run-command invoke  --command-id RunPowerShellScript -name $vmname -g $grp --scripts https://raw.githubusercontent.com/ARambazamba/AZ-204/master/Setup/Windows/setup-az-204.ps1 
 
 # Use the following Scripts to complete Setup
