@@ -1,6 +1,0 @@
-[submodule "Demos/01 AppServices/Demo-03/GitDeployApp"]
-	path = Demos/01 AppServices/Demo-03/GitDeployApp
-	url = https://github.com/ARambazamba/GitDeployApp
-[submodule "Demos/07-Secure-Solutions/02 ManagedIdentity/Demo-02/Managed-Identity-App"]
-	path = Demos/07-Secure-Solutions/02 ManagedIdentity/Demo-02/Managed-Identity-App
-	url = https://github.com/ARambazamba/Managed-Identity-App
