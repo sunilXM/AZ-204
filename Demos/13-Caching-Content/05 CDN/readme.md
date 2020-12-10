@@ -9,7 +9,7 @@
 Build Angular Project:
 
 ```
-cd HelloAzureCDN
+cd foodui
 npm i
 ng build --prod
 ```
