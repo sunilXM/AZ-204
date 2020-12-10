@@ -9,7 +9,7 @@
 
 ![appreg](_images/app-reg.jpg)
 
-![appreg2](_images/app-reg.jpg)
+![appreg2](_images/app-reg2.jpg)
 
 ### Run Demo
 
