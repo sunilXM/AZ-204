@@ -211,7 +211,9 @@ Pull / Push from / to repository:
 git pull / git push
 ```
 
-## Refresh from Upstream
+## Getting Updates for Class - Forking Workflow
+
+![forking-wf](_images/forking-workflow.jpg)
 
 > Note: You can use this guide to refresh changes I made during the week to your forked repo
 
