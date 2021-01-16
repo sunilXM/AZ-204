@@ -2,6 +2,8 @@
 
 Companion Demo Material for Class Delivery by [Alexander Pajer](https://www.integrations.at/kontakt.aspx)
 
+[Exam AZ-204: Developing Solutions for Microsoft Azure](https://docs.microsoft.com/en-us/learn/certifications/exams/az-204)
+
 # Lab Virtual Machine Installed Software List
 
 | Software                                                  | Link                                                                                    |
@@ -19,7 +21,7 @@ Companion Demo Material for Class Delivery by [Alexander Pajer](https://www.inte
 | Azure Storage Explorer                                    | https://azure.microsoft.com/features/storage-explorer/                                  |
 | Git for Windows                                           | https://git-scm.com/download/win                                                        |
 | Git Extensions                                            | http://gitextensions.github.io                                                          |
-| .NET 5 SDK, .NET Core 3.1 SDK                        | https://dotnet.microsoft.com/download                                                   |
+| .NET 5 SDK, .NET Core 3.1 SDK                             | https://dotnet.microsoft.com/download                                                   |
 | Setx                                                      | https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/setx    |
 | azCopy                                                    | https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10            |
 | Docker Desktop                                            | https://www.docker.com/products/docker-desktop                                          |
@@ -27,7 +29,7 @@ Companion Demo Material for Class Delivery by [Alexander Pajer](https://www.inte
 
 > Note: In order for Docker to work on a Windows 10 host you need to install Hyper-V or use Windows Subsystem for Linux 2 (WSL2). A detailed Setup Guide can be found [here](https://github.com/ARambazamba/ClassSetup)
 
-## Cloud Ressources Required
+## Cloud Ressources
 
 [Github Account](https://github.com/)
 
@@ -35,7 +37,7 @@ Azure Tenant:
 
 - Using [Azure Passes](https://www.microsoftazurepass.com/)
 - Azure Paid / Sponsored Subscription
-- [Azure Trial](https://azure.microsoft.com/en-us/free/)
+- [Azure Trial Subscription](https://azure.microsoft.com/en-us/free/)
 
 > Note: Azure Passes can only be used once per e-mail account (Live ID)
 

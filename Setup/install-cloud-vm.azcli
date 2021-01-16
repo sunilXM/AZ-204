@@ -9,7 +9,10 @@ az group create -n $grp -l $loc
 
 az vm create -g $grp -n $vmname --admin-username $user --admin-password $pwd --image MicrosoftWindowsDesktop:Windows-10:20h2-entn-g2:19042.630.2011061636 --size Standard_E2s_v3
 
-az vm run-command invoke  --command-id RunPowerShellScript -name $vmname -g $grp --scripts https://raw.githubusercontent.com/ARambazamba/AZ-204/master/Setup/Windows/install-chocolatey.ps1
+# az vm extension set -n $vmname 
 
-az vm run-command invoke  --command-id RunPowerShellScript -name $vmname -g $grp --scripts https://raw.githubusercontent.com/ARambazamba/AZ-204/master/Setup/Windows/setup-az-204.ps1 
+# az vm run-command invoke  --command-id RunPowerShellScript -name $vmname -g $grp --scripts https://raw.githubusercontent.com/ARambazamba/AZ-204/master/Setup/Windows/install-chocolatey.ps1
 
+# az vm run-command invoke  --command-id RunPowerShellScript -name $vmname -g $grp --scripts https://raw.githubusercontent.com/ARambazamba/AZ-204/master/Setup/Windows/setup-az-204.ps1 
+
+# az vm extension list -g $grp --vm-name $vmname
