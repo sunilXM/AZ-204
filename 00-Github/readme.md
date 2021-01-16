@@ -211,11 +211,9 @@ Pull / Push from / to repository:
 git pull / git push
 ```
 
-## Getting Updates for Class - Forking Workflow
+## Forking Workflow - Getting Updates for Class Demos
 
 ![forking-wf](_images/forking-workflow.jpg)
-
-> Note: You can use this guide to refresh changes I made during the week to your forked repo
 
 Original Repo could be: `https://github.com/ARambazamba/AZ-204` where `ARambazamba` is the `original-owner-github-username` and `AZ-204` is the `reponame`
 
